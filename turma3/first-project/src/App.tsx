@@ -5,14 +5,42 @@ import Header from './components/Header'
 import { Movement } from './models/interfaces/Movements'
 
 function App() {
-  const [ currentBalance, setCurrentBalance ] = useState(0)
-  const [ currentExpenses, setCurrentExpenses ] = useState(0)
-  const [ movementsItems, setMovementsItems ] = useState<Array<Movement>>([])
+  const [ currentBalance, setCurrentBalance ] = useState(0) //Saldo atual da conta
+  const [ currentExpenses, setCurrentExpenses ] = useState(0) //despesas atuais da conta
+  const [ movementsItems, setMovementsItems ] = useState<Array<Movement>>([]) //movimentação da conta
+
+  const setNewMovement = (movement: Movement) => { 
+    if (movement) { 
+      setMovementsItems((prevMovements) => {
+        const movements = [...prevMovements]
+        movements.unshift({
+          name: movement.name,
+          value: movement.value,
+          type: movement.type,
+          id: Math.random().toString(),
+        })
+        return movements
+      })
+
+      movement.type === 'Input' && 
+      setCurrentBalance((prevBalance) => prevBalance + Number(movement.value))
+
+      if (movement.type === 'Output') {
+        setCurrentExpenses((prevExpenses) => prevExpenses + Number(movement.value))
+
+        currentBalance > 0 && setCurrentBalance ( (prevBalance) => prevBalance - Number(movement.value) )
+      }
+    }
+  }
 
   return (
     <>
         <Header />
-        <FinanceControl />
+        <FinanceControl
+              balance={ currentBalance }
+              expenses={ currentExpenses }
+              handleSetMovement={ setNewMovement }
+        />
     </>
   )
 }
