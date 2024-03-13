@@ -1,6 +1,6 @@
 export interface Movement {
     name: string,
-    value: number,
+    value: string,
     type: 'Input' | 'Output',
     id?: string,
 }
