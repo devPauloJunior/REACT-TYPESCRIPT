@@ -60,7 +60,7 @@ const Expenses = ( {
     <>
     <div className="expenses-container">
         <div className="expenses-card">
-            <header>
+            <header className="expenses-header">
             <FontAwesomeIcon icon={faPercent} color="#7af1a7" size="2x" />
             <h2>Despesas</h2>
             </header>
@@ -77,7 +77,7 @@ const Expenses = ( {
 
             {renderInputForm && (
                 <form onSubmit={ formSubmitHandler }>
-                    <div>
+                    <div className="input-form-container">
                         <input 
                             type="text"
                             placeholder="Nome"
@@ -93,7 +93,7 @@ const Expenses = ( {
                             onChange={handleInputValueForm}
                         />
                     </div>
-                    <div>
+                    <div className="action-form-buttons-container">
                         <Button
                             title="Cancelar"
                             priority="Output"

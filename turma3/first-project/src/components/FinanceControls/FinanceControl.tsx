@@ -10,7 +10,7 @@ const FinanceControl = ({ handleSetMovement, balance, expenses }: FinanceControl
     movement && handleSetMovement(movement)
   }
   return (
-    <div>
+    <div className="container-finances">
       <Balance currentBalance={balance} emitMovement={receiveNewMovement} />
       <Expenses currentExpenses={expenses} currentBalance={balance} emitMovement={receiveNewMovement} />
     </div>
