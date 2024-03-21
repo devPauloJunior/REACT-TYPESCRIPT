@@ -2,7 +2,7 @@ import logoImg from '../../assets/logo.svg'
 import { Link } from 'react-router-dom'
 
 export function Header() {
-  const signed = true
+  const signed = false
   const loadingAuth = false
   return (
     <div>
