@@ -1,0 +1,13 @@
+{
+    "users": [
+      { "id": "1", "name": "Paulo", "email": "paulo@teste.com.br", "password": "12345A" },
+      { "id": "2", "name": "Joao", "email": "joao@teste.com.br", "password": "54321B" }
+    ],
+    "car": [
+      { "id": "1", "car_model": "Gol", "car_km": 90000, "car_price": 39000 },
+      { "id": "2", "car_model": "Onix", "car_km": 34000, "car_price": 56000 }
+    ],
+    "carenjoy": [
+        { "id": "1", "user_id": "1", "car_id": "2"}
+      ]
+  }
