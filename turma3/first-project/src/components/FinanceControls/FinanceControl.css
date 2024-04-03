@@ -1,0 +1,3 @@
+.container-finances { display: flex; justify-content: center; align-items: center; }
+
+.container-finances div:nth-child(2) { margin-left: 1.5rem; }

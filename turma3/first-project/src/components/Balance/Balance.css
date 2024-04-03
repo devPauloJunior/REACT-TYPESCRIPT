@@ -1,0 +1,19 @@
+.balance-container { display: flex; justify-content: center; align-items: center; }
+
+.balance-card { background-color: #36383e; display: flex; justify-content: center; align-items: center; flex-direction: column; width: 500px; height: 300px; border-radius: 8px; }
+
+.balance-header { display: flex; justify-content: center; align-items: center; margin-top: -2rem; }
+
+.balance-card h2 { margin-left: 1rem; font-weight: 500; font-size: 18px; color: #ddddcd; }
+
+.balance-card h3 { margin-left: 1rem; font-weight: 500; font-size: 18px; color: #ddddcd; }
+
+.input-form-container { display: flex; justify-content: center; align-items: center; gap: 10px; }
+
+.balance-input { box-shadow: inset #ddddcd 0 0 0 2px; border: 0px; background-color: #36383e; appearance: none; width: 50%; position: relative; border-radius: 8px; padding: 10px 12px; line-height: 1.4; color: #ddddcd; font-size: 16px; font-weight: 400; height: 30px; transition: all 0.2s ease; }
+
+.balance-input:hover { box-shadow: 0 0 0 0 #ffffff inset, #7af1a7 0 0 0 3px; }
+
+.input-form-container.invalid input { background-color: #e43f4d; box-shadow: inset #e43f4d 0 0 0 2px; }
+
+.action-form-buttons-container { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 1rem; }

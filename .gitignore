@@ -22,4 +22,8 @@ dist-ssr
 *.ntvs*
 *.njsproj
 *.sln
+<<<<<<< HEAD
 *.sw?
+=======
+*.sw?
+>>>>>>> caae376361a60cc7ca1ae3040655f4c243b34a7f
