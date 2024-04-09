@@ -1,6 +1,7 @@
 import { ReactNode, createContext, useState, useEffect } from 'react'
 import { onAuthStateChanged } from 'firebase/auth'
 import { auth } from '../services/firebaseConnection'
+import { UserProps } from '../interfaces/UserInterface'
 
 interface AuthProviderProps{
   children: ReactNode
@@ -11,12 +12,6 @@ type AuthContextData = {
   loadingAuth: boolean;
   handleInfoUser: ({ name, email, uid }: UserProps) => void;
   user: UserProps | null;
-}
-
-interface UserProps{
-  uid: string;
-  name: string | null;
-  email: string | null;
 }
 
 export const AuthContext = createContext({} as AuthContextData)
