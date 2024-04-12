@@ -1,13 +1,16 @@
-import { useState } from 'react'
-import './App.css'
+import AuthCard from './components/AuthCard'
+import Button from './components/Button'
+import { ContextProvider } from './contexts/Context'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-     <h1>Context-API</h1>
-    </>
+    <ContextProvider>
+      <Button />
+      <div style={{ border: '1px solid gray', padding: '10px 30px' }}>
+        <AuthCard />
+      </div>
+     </ContextProvider>
   )
 }
 

@@ -1,6 +1,6 @@
 // Initial State - Theme
 export type ThemeState = {
-    theme: 'light' | 'dark'
+    theme: 'light' | 'dark' | 'green' | 'red'
 }
 
 // Action
@@ -10,4 +10,4 @@ type ChangeTheme = {
 }
 
 // Export
-export type ThemeAction = ChangeTheme | AddTheme
+export type ThemeAction = ChangeTheme
